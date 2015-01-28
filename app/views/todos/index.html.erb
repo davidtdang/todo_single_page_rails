@@ -1,0 +1,15 @@
+
+<p>
+  Add a new todo
+</p>
+
+<%= form_for(@todo) do |f|%>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+
+<% @todos.each do |task|%>
+<li><%= task.content %></li>
+<li><%= task.completed %></li>
+
+<%end%>
